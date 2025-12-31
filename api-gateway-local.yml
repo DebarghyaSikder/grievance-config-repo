@@ -5,6 +5,14 @@ spring:
   cloud:
     gateway:
       routes:
+
+        # AUTH SERVICE routes
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/auth/**
+
+        # GRIEVANCE SERVICE routes
         - id: grievance-service
           uri: lb://GRIEVANCE-SERVICE
           predicates:
