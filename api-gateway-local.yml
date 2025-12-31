@@ -5,8 +5,7 @@ spring:
   cloud:
     gateway:
       default-filters:
-        - PreserveHostHeader
-        - AddRequestHeader=Authorization, #{request.headers.Authorization}
+        - TokenRelay
       routes:
 
         - id: auth-service
