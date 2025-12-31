@@ -1,19 +1,13 @@
 server:
-  port: 8080
+  port: 8084
 
 spring:
-  cloud:
-    gateway:
-      default-filters:
-        - TokenRelay
-      routes:
+  datasource:
+    url: jdbc:mysql://localhost:3306/grievance_db_grievance?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: Nike2004$
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-        - id: auth-service
-          uri: lb://AUTH-SERVICE
-          predicates:
-            - Path=/api/v1/auth/**
-
-        - id: grievance-service
-          uri: lb://GRIEVANCE-SERVICE
-          predicates:
-            - Path=/api/v1/grievances/**
+  jpa:
+    hibernate:
+      ddl-auto: update
