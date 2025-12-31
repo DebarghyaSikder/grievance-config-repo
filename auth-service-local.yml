@@ -7,8 +7,11 @@ spring:
     username: root
     password: Nike2004$
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+jwt:
+  secret: "THIS_IS_A_TEMP_SECRET_CHANGE_IT_LATER_32CHARS"
+  expiration: 86400000
