@@ -4,6 +4,12 @@ server:
 spring:
   cloud:
     gateway:
+      routes:
+        - id: grievance-service
+          uri: lb://GRIEVANCE-SERVICE
+          predicates:
+            - Path=/api/v1/grievances/**
+
       discovery:
         locator:
           enabled: true
