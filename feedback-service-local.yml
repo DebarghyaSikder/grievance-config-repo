@@ -1,9 +1,9 @@
 server:
-  port: 8083
+  port: 8085
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/feedback_db_grievance?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/grievance_db_feedback?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: Nike2004$
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -11,3 +11,4 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
