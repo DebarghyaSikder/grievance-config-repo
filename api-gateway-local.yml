@@ -22,7 +22,7 @@ spring:
         - id: feedback-service
           uri: lb://FEEDBACK-SERVICE
           predicates:
-            - Path=/api/v1/feedback/**    
+            - Path=/api/v1/feedbacks/**    
 
 jwt:
   secret: "THIS_IS_A_TEMP_SECRET_CHANGE_IT_LATER_32CHARS"
