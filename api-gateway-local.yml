@@ -22,7 +22,12 @@ spring:
         - id: feedback-service
           uri: lb://FEEDBACK-SERVICE
           predicates:
-            - Path=/api/v1/feedbacks/**    
+            - Path=/api/v1/feedbacks/**
+                
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/v1/notifications/**    
 
 jwt:
   secret: "THIS_IS_A_TEMP_SECRET_CHANGE_IT_LATER_32CHARS"
