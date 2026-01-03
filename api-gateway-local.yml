@@ -19,11 +19,6 @@ spring:
           predicates:
             - Path=/api/v1/grievances/**
 
-        - id: department-service
-          uri: lb://GRIEVANCE-SERVICE
-          predicates:
-            - Path=/api/v1/departments/**
-
         - id: feedback-service
           uri: lb://FEEDBACK-SERVICE
           predicates:
